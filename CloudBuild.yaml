@@ -1,0 +1,32 @@
+steps:
+- name: node
+  entrypoint: yarn
+  args: ['install']
+- name: node
+  entrypoint: yarn
+  args: ['workspaces', 'list']
+- name: node
+  entrypoint: yarn
+  args: ['run','validate-all-sf']
+- name: node
+  entrypoint: 'bash'
+  args: ['-c', 'yarn sf']
+- name: node
+  entrypoint: 'bash'
+  args: [
+        '-c',
+        'yarn sf login org jwt',
+        '-u $$SF_USER_NAME',
+        '-f $$SF_SERVER_JWT_KEY',
+        '-i $$SF_CLIENT_ID',
+        '-l https://login.salesforce.com']
+  secretEnv: ['SF_CLIENT_ID', 'SF_SERVER_JWT_KEY', 'SF_USER_NAME']
+availableSecrets:
+  secretManager:
+  - versionName: projects/670799321458/secrets/SF_CLIENT_ID/versions/1
+    env: 'SF_CLIENT_ID'
+  - versionName: projects/670799321458/secrets/SF_SERVER_JWT_KEY/versions/2
+    env: 'SF_SERVER_JWT_KEY'
+  - versionName: projects/670799321458/secrets/SF_USER_NAME/versions/1
+    env: 'SF_USER_NAME'
+

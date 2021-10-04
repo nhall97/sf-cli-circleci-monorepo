@@ -1,0 +1,23 @@
+{
+  "name": "sf-cli-pipeline",
+  "version": "v0.0.1",
+  "description": "Using the new Salesforce CLI (Beta) to expirement with CI/CD pipelines",
+  "main": "index.js",
+  "repository": "https://github.com/nhall97/salesforce-cli-pipeline.git",
+  "author": "Nathan <62209008+nhall97@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@salesforce/cli": "^0.0.38",
+    "snyk": "^1.728.0"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "validate-all-sf": "yarn workspaces foreach -A run verify-sf",
+    "snyk:auth": "snyk auth",
+    "snyk:test": "snyk test",
+    "snyk:monitor": "snyk monitor"
+  },
+  "private": true
+}
