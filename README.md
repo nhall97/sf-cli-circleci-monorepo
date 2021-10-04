@@ -1,4 +1,4 @@
-#  sf-cli-cloudbuild-pipeline
+#  sf-cli-circleci-pipeline
 Using the new Salesforce CLI (Beta) to expirement with CI/CD pipelines
 https://github.com/salesforcecli/cli
 
@@ -41,5 +41,5 @@ Deploy all packages located in workspace:
 ```$yarn workspaces foreach -R run deploy```
 
 
-#### GCP CloudBuild Integration
-Cloudbuild configuration added & trigger added on push to main branch
+#### CircleCI Integration
+CircleCI configuration added & trigger added on push to main branch
