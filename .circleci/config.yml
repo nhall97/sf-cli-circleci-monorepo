@@ -9,7 +9,7 @@ orbs:
 workflows:
     workspace-validation:
       jobs:
-        - validate-sf:
+        - node/run:
             app-dir: 
             pkg-manager: yarn-berry 
             yarn-run: validate-all-sf 
