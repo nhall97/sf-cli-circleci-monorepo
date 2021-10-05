@@ -7,9 +7,9 @@ orbs:
   node: circleci/node@4.7
 
 workflows:
-    validate-sf-workspaces:
+    workspace-validation:
       jobs:
-        - node/run:
+        - validate-sf:
             app-dir: 
             pkg-manager: yarn-berry 
             yarn-run: validate-all-sf 
