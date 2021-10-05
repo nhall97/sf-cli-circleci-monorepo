@@ -10,6 +10,6 @@ workflows:
     example-workflow:
       jobs:
         - node/run:
-            app-dir: / 
+            app-dir: 
             pkg-manager: yarn-berry 
             yarn-run: validate-all-sf 
