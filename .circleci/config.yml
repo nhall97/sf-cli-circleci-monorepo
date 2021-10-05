@@ -7,7 +7,7 @@ orbs:
   node: circleci/node@4.7
 
 workflows:
-    example-workflow:
+    validate-sf-workspaces:
       jobs:
         - node/run:
             app-dir: 
