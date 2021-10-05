@@ -1,4 +1,5 @@
 #  sf-cli-circleci-pipeline
+[![CircleCI](https://circleci.com/gh/nhall97/sf-cli-circleci-monorepo/tree/main.svg?style=svg)](https://circleci.com/gh/nhall97/sf-cli-circleci-monorepo/tree/main)
 Using the new Salesforce CLI (Beta) to expirement with CI/CD pipelines
 https://github.com/salesforcecli/cli
 
